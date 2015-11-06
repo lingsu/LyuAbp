@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Linq;
 using Abp.Dependency;
+using Abp.Runtime.Validation;
+using Castle.Core.Internal;
 using Castle.Core.Logging;
 
 namespace Abp.Logging
 {
     /// <summary>
-    /// This class can be used to write logs from somewhere where it's a little hard to get a reference to the <see cref="ILogger"/>.
+    /// 写日志 <see cref="ILogger"/>.
     /// Normally, get <see cref="ILogger"/> using property injection.
     /// </summary>
     internal class LogHelper
