@@ -56,11 +56,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collections\DictionaryExtensions.cs" />
+    <Compile Include="Dependency\ConventionalRegistrationConfig.cs" />
+    <Compile Include="Dependency\ConventionalRegistrationContext.cs" />
+    <Compile Include="Dependency\DependencyLifeStyle.cs" />
+    <Compile Include="Dependency\DictionayBasedConfig.cs" />
+    <Compile Include="Dependency\IConventionalDependencyRegistrar.cs" />
+    <Compile Include="Dependency\IConventionalRegistrationContext.cs" />
+    <Compile Include="Dependency\IDictionaryBasedConfig.cs" />
+    <Compile Include="Dependency\IIocManager.cs" />
+    <Compile Include="Dependency\IIocRegistrar.cs" />
+    <Compile Include="Dependency\IIocResolver.cs" />
+    <Compile Include="Dependency\IocManager.cs" />
     <Compile Include="Logging\LogHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

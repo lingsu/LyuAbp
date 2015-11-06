@@ -1,4 +1,5 @@
 ﻿using System;
+using Abp.Dependency;
 using Castle.Core.Logging;
 
 namespace Abp.Logging
