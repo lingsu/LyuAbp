@@ -1,4 +1,5 @@
-﻿using Abp.Collections;
+﻿using Abp.Application.Navigation;
+using Abp.Collections;
 
 namespace Abp.Configuration.Startup
 {

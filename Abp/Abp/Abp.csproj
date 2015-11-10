@@ -59,14 +59,32 @@
   <ItemGroup>
     <Compile Include="AbpBootstrapper.cs" />
     <Compile Include="AbpException.cs" />
+    <Compile Include="Application\Features\IFeatureChecker.cs" />
+    <Compile Include="Application\Features\IFeatureDependency.cs" />
+    <Compile Include="Application\Features\IFeatureDependencyContext.cs" />
+    <Compile Include="Application\Navigation\HasMenuItemDefinitionsExtensions.cs" />
+    <Compile Include="Application\Navigation\IHasMenuItemDefinitions.cs" />
     <Compile Include="Application\Navigation\INavigationManager.cs" />
     <Compile Include="Application\Navigation\INavigationProviderContext.cs" />
+    <Compile Include="Application\Navigation\IUserNavigationManager.cs" />
+    <Compile Include="Application\Navigation\MenuDefinition.cs" />
+    <Compile Include="Application\Navigation\MenuItemDefinition.cs" />
+    <Compile Include="Application\Navigation\MenuItemDefinitionExtensions.cs" />
+    <Compile Include="Application\Navigation\NavigationManager.cs" />
     <Compile Include="Application\Navigation\NavigationProvider.cs" />
+    <Compile Include="Application\Navigation\NavigationProviderContext.cs" />
+    <Compile Include="Application\Navigation\UserMenu.cs" />
+    <Compile Include="Application\Navigation\UserMenuItem.cs" />
+    <Compile Include="Application\Navigation\UserNavigationManager.cs" />
+    <Compile Include="Authorization\IPermissionChecker.cs" />
+    <Compile Include="Authorization\NullPermissionChecker.cs" />
     <Compile Include="Collections\DictionaryExtensions.cs" />
     <Compile Include="Collections\ITypeList.cs" />
+    <Compile Include="Collections\TypeList.cs" />
     <Compile Include="Configuration\Startup\AbpStartupConfiguration.cs" />
     <Compile Include="Configuration\Startup\IAbpStartupConfiguration.cs" />
     <Compile Include="Configuration\Startup\INavigationConfiguration.cs" />
+    <Compile Include="Configuration\Startup\NavigationConfiguration.cs" />
     <Compile Include="Dependency\ConventionalRegistrationConfig.cs" />
     <Compile Include="Dependency\ConventionalRegistrationContext.cs" />
     <Compile Include="Dependency\DependencyLifeStyle.cs" />
@@ -83,15 +101,21 @@
     <Compile Include="Dependency\IocManager.cs" />
     <Compile Include="Dependency\IocRegistrarExtensions.cs" />
     <Compile Include="Dependency\IocResolverExtensions.cs" />
+    <Compile Include="Dependency\ISingletonDependency.cs" />
     <Compile Include="Dependency\ITransientDependency.cs" />
+    <Compile Include="Localization\FixedLocalizableString.cs" />
     <Compile Include="Localization\GlobalizationHelper.cs" />
+    <Compile Include="Localization\ILocalizableString.cs" />
     <Compile Include="Logging\LogHelper.cs" />
     <Compile Include="Modules\IAbpModuleManager.cs" />
     <Compile Include="MultiTenancy\ITenantIdResolver.cs" />
+    <Compile Include="MultiTenancy\MultiTenancySides.cs" />
     <Compile Include="MultiTenancy\NullTenantIdResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reflection\IAssemblyFinder.cs" />
     <Compile Include="Runtime\Security\AbpClaimTypes.cs" />
+    <Compile Include="Runtime\Session\IAbpSession.cs" />
+    <Compile Include="Runtime\Session\NullAbpSession.cs" />
     <Compile Include="Runtime\Validation\AbpValidationException.cs" />
   </ItemGroup>
   <ItemGroup>
