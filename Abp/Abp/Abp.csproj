@@ -47,8 +47,13 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.1.37.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.1.37\lib\dotnet\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,14 +81,23 @@
     <Compile Include="Application\Navigation\UserMenu.cs" />
     <Compile Include="Application\Navigation\UserMenuItem.cs" />
     <Compile Include="Application\Navigation\UserNavigationManager.cs" />
+    <Compile Include="Authorization\AuthorizationProvider.cs" />
     <Compile Include="Authorization\IPermissionChecker.cs" />
+    <Compile Include="Authorization\IPermissionDefinitionContext.cs" />
     <Compile Include="Authorization\NullPermissionChecker.cs" />
+    <Compile Include="Authorization\Permission.cs" />
     <Compile Include="Collections\DictionaryExtensions.cs" />
     <Compile Include="Collections\ITypeList.cs" />
     <Compile Include="Collections\TypeList.cs" />
     <Compile Include="Configuration\Startup\AbpStartupConfiguration.cs" />
+    <Compile Include="Configuration\Startup\AuthorizationConfiguration.cs" />
     <Compile Include="Configuration\Startup\IAbpStartupConfiguration.cs" />
+    <Compile Include="Configuration\Startup\IAuthorizationConfiguration.cs" />
+    <Compile Include="Configuration\Startup\ILocalizationConfiguration.cs" />
+    <Compile Include="Configuration\Startup\ILocalizationSourceList.cs" />
     <Compile Include="Configuration\Startup\INavigationConfiguration.cs" />
+    <Compile Include="Configuration\Startup\LocalizationConfiguration.cs" />
+    <Compile Include="Configuration\Startup\LocalizationSourceList.cs" />
     <Compile Include="Configuration\Startup\NavigationConfiguration.cs" />
     <Compile Include="Dependency\ConventionalRegistrationConfig.cs" />
     <Compile Include="Dependency\ConventionalRegistrationContext.cs" />
@@ -98,14 +112,23 @@
     <Compile Include="Dependency\IIocRegistrar.cs" />
     <Compile Include="Dependency\IIocResolver.cs" />
     <Compile Include="Dependency\Installers\AbpCoreInstaller.cs" />
+    <Compile Include="Dependency\Installers\UnitOfWorkDefaultOptions.cs" />
     <Compile Include="Dependency\IocManager.cs" />
     <Compile Include="Dependency\IocRegistrarExtensions.cs" />
     <Compile Include="Dependency\IocResolverExtensions.cs" />
     <Compile Include="Dependency\ISingletonDependency.cs" />
     <Compile Include="Dependency\ITransientDependency.cs" />
+    <Compile Include="Domain\Uow\DataFilterConfiguration.cs" />
+    <Compile Include="Domain\Uow\IUnitOfWorkDefaultOptions.cs" />
+    <Compile Include="Localization\Dictionaries\ILocalizationDictionary.cs" />
+    <Compile Include="Localization\Dictionaries\ILocalizationDictionaryProvider.cs" />
     <Compile Include="Localization\FixedLocalizableString.cs" />
     <Compile Include="Localization\GlobalizationHelper.cs" />
     <Compile Include="Localization\ILocalizableString.cs" />
+    <Compile Include="Localization\LanguageInfo.cs" />
+    <Compile Include="Localization\LocalizedString.cs" />
+    <Compile Include="Localization\Sources\ILocalizationSource.cs" />
+    <Compile Include="Localization\Sources\LocalizationSourceExtensionInfo.cs" />
     <Compile Include="Logging\LogHelper.cs" />
     <Compile Include="Modules\IAbpModuleManager.cs" />
     <Compile Include="MultiTenancy\ITenantIdResolver.cs" />
